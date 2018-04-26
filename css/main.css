@@ -1,0 +1,24 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+.images > div {
+  width: 200px;
+  height: 200px;
+  background: #fcc;
+  line-height: 200px;
+  text-align: center;
+}
+.images {
+  display: flex;
+  justify-content: flex-start;
+  transition: all 0.3s ease-in-out;
+}
+.window {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+.red {
+  color: red;
+}
