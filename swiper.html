@@ -8,19 +8,23 @@
   <link rel="stylesheet" href="./css/swiper.css">
 </head>
 <body>
-  <div class="window">
-    <div class="images" id="slides">
-      <img src="./img/01.png" width="200" height="200" alt="">
-      <img src="./img/02.png" width="200" height="200" alt="">
-      <img src="./img/03.png" width="200" height="200" alt="">
-      <img src="./img/04.png" width="200" height="200" alt="">
+  <div class="slides">
+    <div class="window">
+      <div class="images" id="slides">
+        <div class="img" style="background-image: url('./img/05.jpg')"></div>
+        <div class="img"  style="background-image: url('./img/06.jpg')"></div>
+        <div class="img"  style="background-image: url('./img/07.jpg')"></div>
+        <div class="img"  style="background-image: url('./img/08.jpg')"></div>
+      </div>
     </div>
-  </div>
-  <div style="text-align: center;">
-    <button>1</button>
-    <button>2</button>
-    <button>3</button>
-    <button>4</button>
+    <div style="text-align: center;" id="buttonWrapper">
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>4</button>
+    </div>
+    <div id="prev" class="arrow">&lt;</div>
+    <div id="next" class="arrow">&gt;</div>
   </div>
   <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="./js/swiper.js"></script>

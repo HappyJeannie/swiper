@@ -2,28 +2,77 @@
   padding: 0px;
   margin: 0px;
 }
-.images > div {
-  width: 200px;
-  height: 200px;
+.images > .img {
+  width: 100%;
+  height: 100%;
   background: #fcc;
   line-height: 200px;
   text-align: center;
+  background: url('../img/05.jpg') no-repeat center center;
+  background-size: cover;
+  display: inline-block;
+  vertical-align: top;
 }
 .images {
-  display: flex;
-  justify-content: flex-start;
-  align-content: center;
+  font-size: 0px;
   transition: all 0.3s ease-in-out;
+  height: 100%;
+  width: 10000%;
 }
 .window {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 600px;
   overflow: hidden;
   margin: 0 auto;
+  position: relative;
 }
 .red {
   color: red;
 }
-button {
-  padding: 4px 10px;
+.slides {
+  position: relative;
+}
+#buttonWrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+}
+#buttonWrapper button {
+  background: #e6e6e6;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 10px;
+  padding: 0px;
+}
+#buttonWrapper button.active {
+  background: #87daff;
+  color: #fff;
+}
+.arrow {
+  position: absolute;
+  top: 100%;
+  left: 20px;
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  background: none;
+  font-size: 16px;
+  color: #87daff;
+  border: none;
+  border-radius: 50%;
+  border: 1px solid #87daff;
+  text-align: center;
+  line-height: 28px;
+  cursor: pointer;
+}
+.arrow:hover {
+  color: #fff;
+  background: #87daff;
+}
+.arrow#next {
+  left: auto;
+  right: 20px;
 }
