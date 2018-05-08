@@ -3,15 +3,25 @@ init();
 let n = 1;
 let size = $('.images img').length;
 let imgs = $('.images img');
-let t = setInterval(function(){
-  $('#html').html(setVal(n+1));
-  makeLeave(getImage(n)).one('transitionend',(e)=>{
-    makeEnter($(e.currentTarget))
-  });
-  makeCurrent(getImage(n+1));
-  n++;
-},2000);
-
+let t;
+move();
+document.addEventListener('visibilitychange',function(){
+  if(document.hidden){
+    clearInterval(t);
+  }else{
+    move();
+  }
+})
+function move(){
+  t = setInterval(function(){
+    $('#html').html(setVal(n+1));
+    makeLeave(getImage(n)).one('transitionend',(e)=>{
+      makeEnter($(e.currentTarget))
+    });
+    makeCurrent(getImage(n+1));
+    n++;
+  },2000);
+}
 //处理n的值
 function setVal(n){
   let size = $('.images img').length;
