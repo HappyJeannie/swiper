@@ -27,7 +27,7 @@ $window.on('mouseenter',function(){
   },3000);
 })
 function bindEvents(){
-  $('#buttonWrapper').on('click','button',function(e){
+  $('#buttonWrapper').on('click','.btn',function(e){
     let $target = $(e.currentTarget);
     let idx = $target.index();
     goToSlide(idx);
