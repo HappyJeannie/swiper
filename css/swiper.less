@@ -15,7 +15,7 @@
 }
 .images{
   font-size: 0px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.8s ease-in-out;
   height: 100%;
   width: 10000%;
 }
@@ -31,30 +31,45 @@
 }
 .slides{
   position: relative;
+  width: 80%;
+  margin: 20px auto;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 0 6px 3px #666;
 }
 #buttonWrapper{
   position: absolute;
   left: 0;
   right: 0;
-  top: 100%;
-  button{
+  bottom: 20px;;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  .btn{
     background:#e6e6e6;
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     text-align:center;
     line-height: 10px;
     padding: 0px;
+    margin-right: 4px;
+    margin-left: 4px;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
     &.active{
       background: rgba(135,218,255,1);
       color: #fff;
+      transform: scale(1.3);
     }
   }
 }
 
 .arrow{
   position: absolute;
-  top: 100%;
+  top: 0%;
+  bottom: 0%;
   left: 20px;
   width: 30px;
   height: 30px;

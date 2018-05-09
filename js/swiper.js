@@ -1,7 +1,7 @@
 let $imgs = $('.img').width($('.window').width());
 let $images = $('.images');
 let len = $imgs.length;
-let $btns = $('#buttonWrapper>button');
+let $btns = $('#buttonWrapper>.btn');
 let $slides = $('#slides');
 let $window = $('.window');
 let current = 0;
@@ -18,13 +18,13 @@ $('#next').on('click',function(){
 })
 let t = setInterval(function(){
   goToSlide(current+1);
-},2000);
+},3000);
 $window.on('mouseenter',function(){
   clearInterval(t);
 }).on('mouseleave',function(){
-  setInterval(function(){
+  t = setInterval(function(){
     goToSlide(current+1);
-  },2000);
+  },3000);
 })
 function bindEvents(){
   $('#buttonWrapper').on('click','button',function(e){
